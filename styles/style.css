@@ -20,8 +20,8 @@ a{text-decoration:none; cursor:pointer}
 
 body{
 	font-family:Arial, Helvetica, sans-serif;
-	/*background:#e6efff url(../images/body_bg.png) center -60px repeat-x;*/
-	background:white url(../images/body_bg.png) center -60px repeat-x;
+	/*background:#e6efff url('../images/body_bg.png') center -60px repeat-x;*/
+	background:white url('../images/body_bg.png') center -60px repeat-x;
 }
 
 #header{
@@ -29,7 +29,7 @@ body{
 	padding:0 0 0 0;
 	width:900px;
 	height:260px;
-	background:url(../images/header_bg_psl.png) center top no-repeat;
+	background:url('../images/header_bg_psl.png') center top no-repeat;
 	position:relative;
 }
 	#header h1,
@@ -52,7 +52,7 @@ body{
 				position:relative;
 				width:266px;
 				height:100px;
-				background-image:url(../images/header_links_psl.png);
+				background-image:url('../images/header_links_psl.png');
 				background-repeat:no-repeat;
 			}
 				#header ul li a strong{
@@ -63,7 +63,7 @@ body{
 					position:absolute;
 					width:266px;
 					height:100px;
-					background-image:url(../images/header_links_psl.png);
+					background-image:url('../images/header_links_psl.png');
 					background-repeat:no-repeat;
 				}
 				#go_download a{
@@ -94,7 +94,7 @@ body{
 		padding:10px 0 0 0;
 		width:175px;
 		height:125px;
-		background:url(../images/popup_bg.png) center center no-repeat;
+		background:url('../images/popup_bg.png') center center no-repeat;
 		z-index:50;
 		font-size:12px;
 		color:#fff;
@@ -119,7 +119,7 @@ body{
 	margin:0 auto;
 	width:900px;
 	height:110px;
-	background:url(../images/page_header.png) center top no-repeat;
+	background:url('../images/page_header.png') center top no-repeat;
 }
 	#page_header p{
 		display:none;
@@ -248,7 +248,7 @@ div#fancy_loading div{
 	left:0;
 	width:40px;
 	height:480px;
-	background:transparent url(../images/fancy_progress.png) no-repeat;
+	background:transparent url('../images/fancy_progress.png') no-repeat;
 }
 
 div#fancy_close{
@@ -257,7 +257,7 @@ div#fancy_close{
 	left:-12px;
 	height:30px;
 	width:30px;
-	background:transparent url(../images/fancy_closebox.png) ;
+	background:transparent url('../images/fancy_closebox.png') ;
 	cursor:pointer;
 	z-index:100;
 	display:none;
@@ -316,18 +316,18 @@ div#fancy_title div{
 td#fancy_title_left{
 	height:32px;
 	width:15px;
-	background:transparent url(../images/fancy_title_left.png) repeat-x;
+	background:transparent url('../images/fancy_title_left.png') repeat-x;
 }
 
 td#fancy_title_main{
 	height:32px;
-	background:transparent url(../images/fancy_title_main.png) repeat-x;
+	background:transparent url('../images/fancy_title_main.png') repeat-x;
 }
 
 td#fancy_title_right{
 	height:32px;
 	width:15px;
-	background:transparent url(../images/fancy_title_right.png) repeat-x;
+	background:transparent url('../images/fancy_title_right.png') repeat-x;
 }
 
 div#fancy_outer{
@@ -356,7 +356,7 @@ a#fancy_left, a#fancy_right{
 	height:100%; 
 	width:35%; 
 	cursor:pointer;
-	background-image:url(../images/data:image/gif;base64,AAAA);
+	background-image:url('../images/data:image/gif;base64,AAAA');
 	z-index:100; 
 }
 
@@ -369,11 +369,11 @@ a#fancy_right{
 }
 
 a#fancy_left:hover{
-	background:transparent url(../images/fancy_left.gif) no-repeat 0% 100%;
+	background:transparent url('../images/fancy_left.gif') no-repeat 0% 100%;
 }
 
 a#fancy_right:hover{
-	background:transparent url(../images/fancy_right.gif) no-repeat 100% 100%;
+	background:transparent url('../images/fancy_right.gif') no-repeat 100% 100%;
 }
 
 #fancy_bigIframe, #fancy_freeIframe{
@@ -399,7 +399,7 @@ div.fancy_bg_n{
 	top:-18px;
 	width:100%;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_n.png) repeat-x;
+	background:transparent url('../images/fancy_shadow_n.png') repeat-x;
 }
 
 div.fancy_bg_ne{
@@ -407,14 +407,14 @@ div.fancy_bg_ne{
 	right:-13px;
 	width:13px;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_ne.png) no-repeat;
+	background:transparent url('../images/fancy_shadow_ne.png') no-repeat;
 }
 
 div.fancy_bg_e{
 	right:-13px;
 	height:100%;
 	width:13px;
-	background:transparent url(../images/fancy_shadow_e.png) repeat-y;
+	background:transparent url('../images/fancy_shadow_e.png') repeat-y;
 }
 
 div.fancy_bg_se{
@@ -422,14 +422,14 @@ div.fancy_bg_se{
 	right:-13px;
 	width:13px;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_se.png) no-repeat;
+	background:transparent url('../images/fancy_shadow_se.png') no-repeat;
 }
 
 div.fancy_bg_s{
 	bottom:-18px;
 	width:100%;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_s.png) repeat-x;
+	background:transparent url('../images/fancy_shadow_s.png') repeat-x;
 }
 
 div.fancy_bg_sw{
@@ -437,14 +437,14 @@ div.fancy_bg_sw{
 	left:-13px;
 	width:13px;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_sw.png) no-repeat;
+	background:transparent url('../images/fancy_shadow_sw.png') no-repeat;
 }
 
 div.fancy_bg_w{
 	left:-13px;
 	height:100%;
 	width:13px;
-	background:transparent url(../images/fancy_shadow_w.png) repeat-y;
+	background:transparent url('../images/fancy_shadow_w.png') repeat-y;
 }
 
 div.fancy_bg_nw{
@@ -452,7 +452,7 @@ div.fancy_bg_nw{
 	left:-13px;
 	width:13px;
 	height:18px;
-	background:transparent url(../images/fancy_shadow_nw.png) no-repeat;
+	background:transparent url('../images/fancy_shadow_nw.png') no-repeat;
 }
 
 #footer {
