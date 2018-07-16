@@ -23,7 +23,8 @@ layout: default
         <span>Tags: </span>
         {%- assign sorted_tags = page.tags | sort -%}
         {%- for tag in sorted_tags -%}
-          <a href='/blog#tags={{ tag }}'>{{ tag }}</a>
+          {%- capture tag_url -%}/blog#tags={{ tag }}{%- endcapture -%}
+          <a href='{{ tag_url | relative_url }}'>{{ tag }}</a>
           {% unless forloop.last %}
             •
           {% endunless %}
