@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Overrides
+// $text-color: #4b5760 !default;
+
+@import "minima";
+
+// Additional
+
+.post-tags a {
+    color: $grey-color;
+}
+
+.simple-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.simple-footer span {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.simple-footer ul.social-media-list > li {
+    display: inline-block;
+    margin-left: 20px;
+}
