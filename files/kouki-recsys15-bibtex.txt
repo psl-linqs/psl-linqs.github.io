@@ -1,6 +1,0 @@
-@InProceedings{kouki:recsys15,
-  author       = "Kouki, Pigi and Fakhraei, Shobeir and Foulds, James and Eirinaki, Magdalini and Getoor, Lise",
-  title        = "HyPER: A Flexible and Extensible Probabilistic Framework for Hybrid Recommender Systems",
-  booktitle    = "ACM Conference on Recommender Systems (RecSys)",
-  year         = "2015"
-}

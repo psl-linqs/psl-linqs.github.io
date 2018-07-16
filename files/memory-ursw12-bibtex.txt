@@ -1,6 +1,0 @@
-@inproceedings{memory:ursw12,
-  author = "Memory, Alex and Kimmig, Angelika and Bach, Stephen H. and Raschid, Louiqa and Getoor, Lise",
-  title = "Graph Summarization in Annotated Data Using Probabilistic Soft Logic",
-  booktitle = "{International Workshop on Uncertainty Reasoning for the Semantic Web (URSW)}",
-  year = 2012
-  }

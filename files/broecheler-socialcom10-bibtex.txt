@@ -1,6 +1,0 @@
-@inproceedings{broecheler:nips10,
-  author       = "Broecheler, Matthias and Shakarian, Paulo and Subrahmanian, V.S.",
-  title        = "A Scalable Framework for Modeling Competitive Diffusion in Social Networks",
-  booktitle    = "International Conference on Social Computing (SocialCom)",
-  year         = "2010",
-}

@@ -1,6 +1,0 @@
-@inproceedings{bach:uai13,
-  author = "Bach, Stephen H. and Huang, Bert and London, Ben and Getoor, Lise",
-  title = "Hinge-loss {M}arkov Random Fields: Convex Inference for Structured Prediction",
-  booktitle = "{Uncertainty in Artificial Intelligence (UAI)}",
-  year = 2013
-  }

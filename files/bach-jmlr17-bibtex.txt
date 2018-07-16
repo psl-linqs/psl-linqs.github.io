@@ -1,8 +1,0 @@
-@article{bach:jmlr17,
-  Author = {Bach, Stephen H. and Broecheler, Matthias and Huang, Bert and Getoor, Lise},
-  Journal = {Journal of Machine Learning Research (JMLR)},
-  Title = {Hinge-Loss {M}arkov Random Fields and Probabilistic Soft Logic},
-  Volume = {18},
-  Number = {109},
-  Pages = {1--67},
-  Year = {2017}}

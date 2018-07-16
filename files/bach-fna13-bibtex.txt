@@ -1,6 +1,0 @@
-@inproceedings{bach:fna13,
-  author       = "Bach, Stephen H. and Huang, Bert and Getoor, Lise",
-  title        = "Large-margin Structured Learning for Link Ranking",
-  booktitle    = "NIPS Workshop on Frontiers of Network Analysis: Methods, Models, and Applications",
-  year         = "2013",
-  }

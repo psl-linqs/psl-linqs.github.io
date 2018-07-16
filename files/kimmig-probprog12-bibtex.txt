@@ -1,6 +1,0 @@
-@inproceedings{kimmig:probprog12,
-  author = "Kimmig, Angelika and Bach, Stephen H. and Broecheler, Matthias and Huang, Bert and Getoor, Lise",
-  title = "A Short Introduction to Probabilistic Soft Logic",
-  booktitle = "{NIPS Workshop on Probabilistic Programming: Foundations and Applications}",
-  year = 2012
-  }

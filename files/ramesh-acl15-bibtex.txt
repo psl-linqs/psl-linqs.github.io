@@ -1,6 +1,0 @@
-@InProceedings{foulds:icml15,
-  author       = "Foulds, James and Kumar, Shachi and Getoor, Lise",
-  title        = "Latent Topic Networks: A Versatile Probabilistic Programming Framework for Topic Models",
-  booktitle    = "International Conference on Machine Learning (ICML)",
-  year         = "2015",
-}

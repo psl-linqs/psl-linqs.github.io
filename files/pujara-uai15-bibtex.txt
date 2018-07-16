@@ -1,6 +1,0 @@
-@InProceedings{pujara:uai15,
-  author       = "Pujara, Jay and London, Ben and Getoor, Lise",
-  title        = "Budgeted Online Collective Inference",
-  booktitle    = "Uncertainty in Artificial Intelligence (UAI)",
-  year         = "2015",
-}

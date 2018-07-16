@@ -1,6 +1,0 @@
-@InProceedings{fakhraei:kdd15,
-  author       = "Fakhraei, Shobeir and Foulds, James and Shashanka, Madhusudana and Getoor, Lise",
-  title        = "Collective Spammer Detection in Evolving Multi-Relational Social Networks",
-  booktitle    = "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
-  year         = "2015"
-}

@@ -1,6 +1,0 @@
-@inproceedings{huang:starai12,
-  author       = "Huang, Bert and Kimmig, Angelika and Getoor, Lise and Golbeck, Jennifer",
-  title        = "Probabilistic Soft Logic for Trust Analysis in Social Networks",
-  booktitle    = "International Workshop on Statistical Relational Artificial Intelligence (StaRAI 2012)",
-  year         = "2012",
-}

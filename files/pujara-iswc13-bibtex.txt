@@ -1,7 +1,0 @@
-@InProceedings{pujara:iswc13,
-  author       = "Pujara, Jay and Miao, Hui and Getoor, Lise and Cohen, William",
-  title        = "Knowledge Graph Identification",
-  booktitle    = "International Semantic Web Conference (ISWC)",
-  year         = "2013",
-  note         = "Winner of Best Student Paper award",
-}
