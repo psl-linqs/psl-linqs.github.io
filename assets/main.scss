@@ -5,9 +5,32 @@
 // Overrides
 // $text-color: #4b5760 !default;
 
+$secondary-color: #00458c !default;
+$secondary-text-color: #fff !default;
+
+
 @import "minima";
 
 // Additional
+
+header.site-header,
+footer.site-footer {
+    border-top-color: $secondary-color;
+    background-color: $secondary-color !important;
+    color: $secondary-text-color !important;
+}
+
+header.site-header a,
+footer.site-footer a,
+footer.site-footer a svg,
+footer.site-footer span {
+    color: $secondary-text-color !important;
+    fill: $secondary-text-color !important;
+}
+
+footer.site-footer {
+    padding: 10px;
+}
 
 .post-tags a {
     color: $grey-color;
@@ -16,11 +39,20 @@
 .simple-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+h2.footer-heading {
+    margin-bottom: 0;
 }
 
 .simple-footer span {
     font-size: $small-font-size;
     color: $grey-color;
+}
+
+.simple-footer ul.social-media-list {
+    margin-bottom: 0;
 }
 
 .simple-footer ul.social-media-list > li {
