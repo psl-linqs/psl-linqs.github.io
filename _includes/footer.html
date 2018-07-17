@@ -2,7 +2,13 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <div class='simple-footer'>
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+      <span>
+        {%- include social.html -%}
+      </span>
+    </div>
 
     <div class='simple-footer'>
       <span>
@@ -10,9 +16,9 @@
         See <a href="https://github.com/{{ site.github_username }}/psl-website/blob/master/LICENSE.md">license</a>.
       </span>
 
-      <span>
-        {%- include social.html -%}
-      </span>
+      <div class='issues'>
+        Issues or corrections? <a href="https://github.com/{{ site.github_username }}/psl-website/issues">Click here</a>.
+      </div>
     </div>
   </div>
 
