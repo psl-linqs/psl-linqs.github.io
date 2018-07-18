@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications
+nav-title: Publications
 order: 4
 permalink: /pubs/
 ---

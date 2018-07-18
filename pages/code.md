@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Code
+nav-title: Code
 order: 3
 permalink: /code/
 ---

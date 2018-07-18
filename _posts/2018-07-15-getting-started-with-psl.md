@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with PSL
 author: Eriq Augustine
 date: 2018-07-15 10:10:41 -0700
-tags: [tutorial, v2.1.0]
+tags: [tutorial, v2.1.0, vCANARY-2.1.5]
 ---
 
 TODO(eriq): This is just a copy from the wiki, clean up.
@@ -184,3 +184,10 @@ With the inferred values, some downstream tasks that you can perform are:
 - if you have a gold standard set of labels, you can evaluate your model by computing standard metrics like accuracy, AUC, F1, etc.
 - you may want to use the predicted outputs of PSL as inputs for another model.
 - you may want to visualize the predicted values and use the outputs of PSL as inputs to a data visualization program.
+
+
+TODO(eriq)
+## More Resources
+ - PSL Paper
+   - Sections & PSL Examples
+ - 
