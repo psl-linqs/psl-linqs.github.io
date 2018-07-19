@@ -12,3 +12,4 @@ TODO(eriq):
  - Lise info
  - linqs.org
  - Contact info
+   - https://groups.google.com/forum/#!forum/psl-users
