@@ -8,11 +8,15 @@ permalink: /pubs/
 
 TODO(eriq)
 
-## [All PSL Publications](https://linqs.soe.ucsc.edu/biblio)
+You can find all the PSL-related publications on the [LINQS Publications Page](https://linqs.soe.ucsc.edu/biblio).
 
-## Key PSL Publications
+### Key PSL Publications
 
-[Overview](https://linqs.soe.ucsc.edu/node/242)  
+#### Overview
+[Hinge-Loss Markov Random Fields And Probabilistic Soft Logic](https://linqs.soe.ucsc.edu/node/242)  
+
+
+
 [Weight Learning](https://linqs.soe.ucsc.edu/node/26)  
 [Online Inference](https://linqs.soe.ucsc.edu/node/249)  
 [Latent Variables](https://linqs.soe.ucsc.edu/node/263)  
