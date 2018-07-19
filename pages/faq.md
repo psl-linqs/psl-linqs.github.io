@@ -7,8 +7,11 @@ permalink: /faq/
 ---
 
    - [Do I need to specify the full target set?](#do-i-need-to-specify-the-full-target-set)
+   - [I get an error like: "Can only call getAtom() on persisted RandomVariableAtoms (RVAs) using a PersistedAtomManager."](#i-get-an-error-like-can-only-call-getatom-on-persisted-randomvariableatoms-rvas-using-a-persistedatommanager)
+   - [How do I get more debugging information?](#how-do-i-get-more-debugging-information)
    - [Can PSL run on Windows?](#can-psl-run-on-windows)
    - [What version of PSL should I use?](#what-version-of-psl-should-i-use)
+   - [I get an error like: "Any variable used in a negated (non-functional) predicate must also participate in a positive (non-functional) predicate."](#i-get-an-error-like-any-variable-used-in-a-negated-non-functional-predicate-must-also-participate-in-a-positive-non-functional-predicate)
    - [Some `mvn` commands fail with "... handshake_failure ...".](#some-mvn-commands-fail-with--handshake_failure-)
    - [Some `mvn` commands fail with "Failed to transfer file: https://scm.umiacs.umd.edu/...".](#some-mvn-commands-fail-with-failed-to-transfer-file-httpsscmumiacsumdedu)
 
@@ -45,6 +48,46 @@ However, if you data does have a clique around your desired target, then lazy in
 
 ---
 
+### I get an error like: "Can only call getAtom() on persisted RandomVariableAtoms (RVAs) using a PersistedAtomManager."
+
+This error indicates that PSL found a target atom that was not specified in the data.
+You can fix it by modifying your data to specify the full target set.
+
+See the question: [Do I need to specify the full target set?](#do-i-need-to-specify-the-full-target-set).
+
+---
+
+### How do I get more debugging information?
+
+You can change the logging level of PSL to get more debugging information.
+The logging level must be set at the beginning of the PSL run.
+PSL supports all the standard [log4j logging levels](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html).
+
+Using the `DEBUG` logging level is especially helpful if you want to get basic grounding information (like the number of ground rules per rule),
+or if you want to get more information when requesting help.
+
+#### CLI
+To change the PSL logging level in the Command Line Interface, pass the `-D log4j.threshold=<LOGGING_LEVEL>` argument when invoking PSL.
+For example to use the `DEBUG` logging level, you can pass the following argument to the CLI:
+```
+-D log4j.threshold=DEBUG
+```
+
+#### Groovy
+To change the PSL logging level in the Groovy interface, you will need to edit the `src/main/resources/log4j.properties` file in your maven project.
+Change the line that reads:
+```
+log4j.rootLogger=ERROR, A1
+```
+
+To now use the logging level you want.
+For example to use the `DEBUG` logging level, change the line to:
+```
+log4j.rootLogger=DEBUG, A1
+```
+
+---
+
 ### Can PSL run on Windows?
 
 Yes.  
@@ -52,7 +95,7 @@ PSL's only hard requirement is Java 7/8.
 To use the Groovy interface, Maven should also be installed (although it is not strictly necessary for those with a lot of Java experience).
 To use the CLI, nothing additional is required.
 
-However, the examples that we provide via the [PSL Examples Repository](https://github.com/linqs/psl-examples) contains shell scripts mean for UNIX-based systems (mainly tested on Linux and Mac).
+However, the examples that we provide via the [PSL Examples Repository](https://github.com/linqs/psl-examples) contains shell scripts meant for UNIX-based systems (mainly tested on Linux and Mac).
 So Windows users will either need to use the Windows Linux Subsystem, a Unix-like environment like Cygwin, convert the script to a Windows-compatible script, or perform the operations in the script by hand.
 (The scripts are simple and mainly involve just invoking PSL.)
 
@@ -67,6 +110,43 @@ The current stable version is 2.0.0.
 If you want to take advantage if features currently under development, you can use a [canary build](https://github.com/eriq-augustine/psl/wiki/Working-With-Canary).
 
 If you were using a version of PSL prior to 2.0.0 and would like to upgrade, you can follow the [Migration Guide](https://github.com/linqs/psl/wiki/Migrating-to-PSL-2).
+
+---
+
+### I get an error like: "Any variable used in a negated (non-functional) predicate must also participate in a positive (non-functional) predicate."
+
+Make sure that all your variables appear in either a non-negated atom in the body of the rule or a negated atom in the head of the rule.
+
+For example, the following rule will be rejected by PSL:
+```
+10.0: Foo(A, B) & !Bar(B, C) -> Baz(A, C) ^2
+```
+
+This rule will cause the following error:
+```
+Any variable used in a negated (non-functional) predicate must also participate in a positive (non-functional) predicate.
+The following variables do not meet this requirement: [C].
+```
+
+To fix this you can either rewrite the rule, or introduce a **scoping predicate**.
+A scoping predicate is just a predicate that holds the possible values for a variable.
+Scoping predicates typically only have one argument.
+In this example, it would be a predicate that holds all the possible people.
+A working version of this rule would be:
+```
+10.0: Scope(C) & Foo(A, B) & !Bar(B, C) -> !Baz(A, C) ^2
+```
+
+(Warning: The rest is a technical explanation.)
+
+PSL purposefully enforces this semantic to prevent situations where you try and ground an infinite set.
+In this example, the negated atom, `!Bar(B, C)`, is asking for all examples of the variables `B` and `C` for which the value of `Bar(B, C)` is **not** 1.0.
+Because of PSL's closed world semantics (everything not observed has the value 0.0), this in an infinite set.
+
+However if we can use other atoms to figure out the possible values for the variables `B` and `C`, then we no longer are dealing with an infinite set.
+In this example, the other atom in the body, `Foo(A, B)`, uses `B` and is positive.
+Therefore we now have a domain for `B`, but `C` remains unbound.
+The introduction of the scoping predicate, `Scope(C)`, finally resolves the issue by using `C` in a positive atom.
 
 ---
 
@@ -113,37 +193,7 @@ Old Address: `https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-rel
 New Address: `http://maven.linqs.org/maven/repositories/psl-releases/`
 
 The new address will redirect to an https endpoint.
-If you need to use that https endpoint directly (typically for firewall reasons), you can use the following:  
-`https://linqs-data.soe.ucsc.edu/maven`.
-
----
-
-"Any variable used in a negated (non-functional) predicate must also participate" +                                     
-" in a positive (non-functional) predicate." +                                                                          
-" The following variables do not meet this requirement: [" + StringUtils.join(sortedVariables, ", ") + "]."
-
----
-
-Change logging level
-Number of groundings
-
----
-
-"Can only call getAtom() on persisted RandomVariableAtoms (RVAs)" +
-" using a PersistedAtomManager." +
-" Cannot access " + atom + "." +
-" This typically means that provided data is insufficient." +
-" An RVA (atom to be inferred (target)) was constructed during" +
-" grounding that does not exist in the provided data.");
-
-
----
-
-Make PSL Faster
-Blocking
-
----
-
----
-
----
+If you need to use that https endpoint directly (typically for firewall reasons), you can use the following:
+```
+https://linqs-data.soe.ucsc.edu/maven
+```
