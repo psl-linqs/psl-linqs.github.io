@@ -17,3 +17,4 @@ Jump to:
    - [Key Papers]({{ "/pubs" | relative_url }})
    - [Support Forum](https://groups.google.com/forum/#!forum/psl-users)
    - [Source Code]({{ "/code" | relative_url }})
+   - [PSL Examples](https://github.com/linqs/psl-examples)
