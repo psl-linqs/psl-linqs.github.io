@@ -60,16 +60,16 @@ footer.site-footer {
 
 .tag-listing .tag-bubble {
    display: inline-block;
-   padding: 5px;
+   padding: 7px;
    cursor: pointer;
    text-align: center;
    text-decoration: none;
    outline: none;
    border: #888 solid 1px;
    border-radius: 10px;
-   box-shadow: 2px 4px #aaa;
+   box-shadow: 1px 2px #aaa;
    margin-left: 20px;
-   font-size: $base-font-size * 1.10;
+   font-size: $base-font-size * 0.90;
    background-color: $primary-color;
    color: $primary-text-color;
 }
@@ -80,8 +80,8 @@ footer.site-footer {
 }
 
 .tag-listing .tag-bubble:active {
-  box-shadow: 2px 2px #888;
-  transform: translateY(2px);
+  box-shadow: 1px 1px #888;
+  transform: translateY(1px);
 }
 
 .tag-listing .tag-bubble[data-value=true] {
