@@ -10,7 +10,7 @@ layout: default
   <div class='tag-listing'>
     {%- for tag_info in site.tags -%}
       {%- assign tag = tag_info | first -%}
-      <button data-toggle=true class='tag-bubble' onclick='toggleTag("{{tag}}")'>{{ tag }}</button>
+      <button data-toggle=true class='tag-bubble' data-tag="{{tag}}" onclick='toggleTag("{{tag}}")'>{{ tag }}</button>
     {%- endfor -%}
   </div>
 
@@ -18,7 +18,7 @@ layout: default
 
   <ul class="post-list">
     {%- for post in site.posts -%}
-      <li>
+      <li class='post-entry' data-id="{{ post.id }}" data-tags="{{ post.tags | join: ',' }}">
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
@@ -43,3 +43,13 @@ layout: default
   </ul>
 
 </div>
+
+<script>
+   $(document).ready(function() {
+      applyPostFilters();
+   });
+
+   $(window).on('hashchange', function() {
+      applyPostFilters();
+   });
+</script>
