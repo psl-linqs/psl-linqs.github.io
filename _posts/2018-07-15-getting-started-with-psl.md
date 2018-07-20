@@ -6,23 +6,23 @@ date: 2018-07-15 10:10:41 -0700
 tags: [tutorial, v2.1.0, vCANARY-2.1.5]
 ---
 
-TODO(eriq): This is just a copy from the wiki, clean up.
+Probabilistic Soft Logic (PSL) is a [Statistical Relational Learning (SRL)](https://en.wikipedia.org/wiki/Statistical_relational_learning) framework.
+It is intended to by usable by people at all levels of Computer Science and Machine Learning.
 
-PSL provides a Command Line Interface.
-The CLI is the easiest interface to PSL and handles most situations where you do not need additional customization.
+PSL currently has two primary interfaces: a command line interface (CLI) and a [Groovy](https://en.wikipedia.org/wiki/Apache_Groovy) interface.
+In this tutorial, we will cover the command line interface.
+However, all the examples we reference also have implemented Groovy versions on the same repository.
 
-## Setup
+### Setup
 
-PSL requires that you have [[Java installed | Prerequisites ]].
+For the CLI, the only hard requirement is that your have Java 7 or 8 installed.
+However we will be using some scripts meant for UNIX-style systems (Linux and Mac), so Windows users will have [some additional steps]({{ '/faq/#can-psl-run-on-windows' | relative_url }}).
+We will also be using git to fetch some examples, but users without git can just use a browser to go to the repository and download it directly.
 
-## Running your first program
-Let's first download the files for our example program, run it and see what it does!
+### Getting the code
 
-In this program, we'll use information about known locations of some people, know people know, and what people like to infer who knows each other. We'll first run the program and see the output. We will be working from the command line so open up your shell or terminal.
-
-### Get the code
-As with the other PSL examples, you can find all the code in our [psl-examples repository](https://github.com/linqs/psl-examples).
-We will be using the `simple-acquaintances` example.
+As with all the PSL examples, you can find all the code in our [psl-examples repository](https://github.com/linqs/psl-examples).
+For this tutorial, we will be using the `simple-acquaintances` example.
 
 ```
 git clone https://github.com/linqs/psl-examples.git
@@ -31,30 +31,39 @@ cd psl-examples/simple-acquaintances/cli
 
 ### Run your first PSL program
 
-All the required commands are contained in the `run.sh` script.
-However, the commands are very simple and can also be run individually.
+The `simple-acquaintances` example is a toy model with the goal of inferring whether or not a pair of people already know each other.
+To do this, we will use information about the locations of some people, who people know already, and what people enjoy to infer who knows each other.
+Before we dive into the specifics of the model, lets just get it running.
+
+All examples come with a `run.sh` script that should handle everything for us.
+So on the command line, invoke the run script:
+```
+./run.sh
+```
 
 The PSL jar will be fetched automatically.
-You can also select what version of PSL if fetched/used at the top of this script.
+You can also select what version of PSL is fetched/used at the top of this script.
 
-You should now see output that looks like this (note that the order of the output lines may differ):
+You should now see output that looks like this:
 ```
 Running PSL Inference
 0    [main] INFO  org.linqs.psl.cli.Launcher  - Loading data
-81   [main] INFO  org.linqs.psl.cli.Launcher  - Data loading complete
-81   [main] INFO  org.linqs.psl.cli.Launcher  - Loading model
-159  [main] INFO  org.linqs.psl.cli.Launcher  - Model loading complete
-159  [main] INFO  org.linqs.psl.cli.Launcher  - Starting inference
-224  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Grounding out model.
-320  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Beginning inference.
-420  [main] INFO  org.linqs.psl.reasoner.admm.ADMMReasoner  - Optimization completed in 404 iterations. Primal res.: 0.022839682, Dual res.: 6.607145E-4
-420  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
-447  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Results committed to database.
-457  [main] INFO  org.linqs.psl.cli.Launcher  - Inference Complete
-461  [main] INFO  org.linqs.psl.cli.Launcher  - Starting discrete evaluation
-472  [main] INFO  org.linqs.psl.cli.Launcher  - Discrete evaluation results for KNOWS -- Accuracy: 0.5961538461538461, Error: 21.0, Positive Class Precision: 0.7333333333333333, Positive Class Recall: 0.6285714285714286, Negative Class Precision: 0.4090909090909091, Negative Class Recall: 0.5294117647058824,
-472  [main] INFO  org.linqs.psl.cli.Launcher  - Discrete evaluation complete
+82   [main] INFO  org.linqs.psl.cli.Launcher  - Data loading complete
+82   [main] INFO  org.linqs.psl.cli.Launcher  - Loading model
+178  [main] INFO  org.linqs.psl.cli.Launcher  - Model loading complete
+178  [main] INFO  org.linqs.psl.cli.Launcher  - Starting inference with class: org.linqs.psl.application.inference.MPEInference
+243  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Grounding out model.
+334  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Beginning inference.
+448  [main] INFO  org.linqs.psl.reasoner.admm.ADMMReasoner  - Optimization completed in 405 iterations. Primal res.: 0.022973757, Dual res.: 6.7510834E-4
+448  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+472  [main] INFO  org.linqs.psl.application.inference.MPEInference  - Results committed to database.
+472  [main] INFO  org.linqs.psl.cli.Launcher  - Inference Complete
+477  [main] INFO  org.linqs.psl.cli.Launcher  - Starting evaluation with class: org.linqs.psl.evaluation.statistics.DiscreteEvaluator.
+493  [main] INFO  org.linqs.psl.cli.Launcher  - Evaluation results for KNOWS -- Accuracy: 0.596154, F1: 0.676923, Positive Class Precision: 0.733333, Positive Class Recall: 0.628571, Negative Class Precision: 0.409091, Negative Class Recall: 0.529412
+493  [main] INFO  org.linqs.psl.cli.Launcher  - Evaluation complete.
 ```
+
+TODO(eriq)
 
 ### Where are the prediction?
 By default, the PSL examples output the results into the `inferred-predicates` directory.
