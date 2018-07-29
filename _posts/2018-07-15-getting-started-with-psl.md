@@ -113,7 +113,7 @@ Intuitively, this tells us the relative importance of satisfying this rule compa
 The `^2` at the end of the rules indicates that the hinge-loss function for this rule should be squared.
 This makes for a smoother tradeoff between conflicting values.
 
-For a full description of rule syntax, see the [Rule Specification in the wiki](https://github.com/linqs/psl/wiki/Rule-Specification).
+For a full description of rule syntax, see the [Rule Specification in the wiki](https://github.com/{{ site.github_username }}/psl/wiki/Rule-Specification).
 
 #### Loading the Data
 
@@ -175,7 +175,7 @@ The body can have one or more predicates conjuncted together with the logical co
 The head can have one or more predicates disjuncted together with the logical disjunction operator: `|`.
 The predicates that appear in the body and head can be any combination of open and closed predicate types.
 
-The [Rule Specification wiki page](https://github.com/linqs/psl/wiki/Rule-Specification) contains the full syntax for PSL rules.
+The [Rule Specification wiki page](https://github.com/{{ site.github_username }}/psl/wiki/Rule-Specification) contains the full syntax for PSL rules.
 
 #### Organizing your Data
 

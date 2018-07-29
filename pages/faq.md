@@ -107,9 +107,9 @@ PSL is constantly under development for new features, performance enhancements, 
 So, there are several different version that you can choose from.
 
 The current stable version is 2.0.0.
-If you want to take advantage if features currently under development, you can use a [canary build](https://github.com/eriq-augustine/psl/wiki/Working-With-Canary).
+If you want to take advantage if features currently under development, you can use a [canary build](https://github.com/{{ site.github_username }}/psl/wiki/Working-With-Canary).
 
-If you were using a version of PSL prior to 2.0.0 and would like to upgrade, you can follow the [Migration Guide](https://github.com/linqs/psl/wiki/Migrating-to-PSL-2).
+If you were using a version of PSL prior to 2.0.0 and would like to upgrade, you can follow the [Migration Guide](https://github.com/{{ site.github_username }}/psl/wiki/Migrating-to-PSL-2).
 
 ---
 
