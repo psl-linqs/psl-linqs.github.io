@@ -20,6 +20,16 @@ $transition-text-color: #444 !default;
 
 // Additional
 
+.dev-warning {
+   background-color: #FFBA73;
+   text-align: center;
+   color: $primary-text-color;
+}
+
+header.site-header {
+   border-bottom: 0;
+}
+
 header.site-header,
 footer.site-footer {
    border-top-color: $secondary-color;
