@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with PSL
 author: Eriq Augustine
 date: 2018-07-15 10:10:41 -0700
-tags: [tutorial, v2.1.0, vCANARY-2.1.5]
+tags: [tutorial, v2.1.0]
 ---
 
 Probabilistic Soft Logic (PSL) is a [Statistical Relational Learning (SRL)](https://en.wikipedia.org/wiki/Statistical_relational_learning) framework.
