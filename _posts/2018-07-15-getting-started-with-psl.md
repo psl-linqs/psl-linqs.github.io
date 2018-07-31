@@ -24,9 +24,9 @@ We will also be using git to fetch some examples, but users without git can just
 As with all the PSL examples, you can find all the code in our [psl-examples repository](https://github.com/linqs/psl-examples).
 For this tutorial, we will be using the `simple-acquaintances` example.
 
-```
-$ git clone https://github.com/linqs/psl-examples.git
-$ cd psl-examples/simple-acquaintances/cli
+```sh
+git clone https://github.com/linqs/psl-examples.git
+cd psl-examples/simple-acquaintances/cli
 ```
 
 ### Run your first PSL program
@@ -37,8 +37,8 @@ Before we dive into the specifics of the model, lets just get it running.
 
 All examples come with a `run.sh` script that should handle everything for us.
 So on the command line, invoke the run script:
-```
-$ ./run.sh
+```sh
+./run.sh
 ```
 
 The PSL jar will be fetched automatically.
@@ -97,7 +97,7 @@ The model is defined inside a text file with the format `.psl`.
 We describe this model in the file `simple-acquaintances.psl`.
 
 Let's have a look at the rules that make up our model:
-```
+```prolog
 20: Lived(P1, L) & Lived(P2, L) & (P1 != P2) -> Knows(P1, P2) ^2
 5: Lived(P1, L1) & Lived(P2, L2) & (P1 != P2) & (L1 != L2) -> !Knows(P1, P2) ^2
 10: Likes(P1, L) & Likes(P2, L) & (P1 != P2) -> Knows(P1, P2) ^2
@@ -121,7 +121,7 @@ PSL rules consist of predicates joined by logical operations.
 The names of the predicates and the data to load into them are defined inside the file `simple-acquaintances.data`.
 
 Let's have a look:
-```
+```yaml
 predicates:
   Knows/2: open
   Likes/2: closed
@@ -199,13 +199,13 @@ This is similar to learning the weights of coefficients in a logistic regression
 #### Running Inference
 
 Run inference with the general command:
-```
+```sh
 java -jar psl-cli.jar --infer --model [name of model file].psl --data [name of data file].data
 ```
 
 When we run inference, the inferred values are outputted to the screen.
 If you want to write the outputs to a file and use the inferred values in various ways downstream, you can use:
-```
+```sh
 java -jar psl-cli.jar --infer --model [name of model file].psl --data [name of data file].data --output [directory to write output files]
 ```
 
