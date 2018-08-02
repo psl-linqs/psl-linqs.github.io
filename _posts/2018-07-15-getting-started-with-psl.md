@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with PSL
 author: Eriq Augustine
-date: 2018-07-15 10:10:41 -0700
+date: 2018-07-15 10:00:00 -0700
 tags: [tutorial, v2.1.0]
 ---
 

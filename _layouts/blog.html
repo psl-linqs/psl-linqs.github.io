@@ -8,6 +8,7 @@ layout: default
   {%- endif -%}
 
   <div class='tag-listing'>
+    <span>Filter by tags:</span>
     {%- for tag_info in site.tags -%}
       {%- assign tag = tag_info | first -%}
       <button data-toggle=true class='tag-bubble' data-tag="{{tag}}" onclick='toggleTag("{{tag}}")'>{{ tag }}</button>
