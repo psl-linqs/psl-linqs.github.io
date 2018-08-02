@@ -28,8 +28,8 @@ rss: true
 minima:
   date_format: "%B %d, %Y"
 
-disqus:
-  shortname: linqs
+# disqus:
+#   shortname: linqs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
