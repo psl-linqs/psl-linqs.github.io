@@ -5,7 +5,15 @@ description: >- # this means to ignore newlines until "baseurl:"
    PSL models are easy and fast, you can define them using a straightforward logical syntax and solve them with fast convex optimization.
    PSL has produced state-of-the-art results in many areas spanning natural language processing, social-network analysis, and computer vision.
    The PSL framework is available as an Apache-licensed, open source project on GitHub with an active user group for support.
-baseurl: "/psl-website" # the subpath of your site, e.g. /blog
+
+# Dev:
+# baseurl: "/psl-website" # the subpath of your site, e.g. /blog
+# github_username: eriq-augustine
+
+# Prod:
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username: linqs
+
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /blog/:year/:month/:day/:title:output_ext
@@ -18,8 +26,6 @@ plugins:
 
 # Social Media
 twitter_username: LINQS_edu
-github_username: linqs
-# github_username: eriq-augustine
 youtube_channel: UCJjzqRLiAIa3qENUkzK0zMA
 googleplus_group: "106422136513784453367"
 rss: true
