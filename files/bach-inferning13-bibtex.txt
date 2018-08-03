@@ -1,6 +1,0 @@
-@InProceedings{bach:inferning13,
-  author = "Bach, Stephen H. and Huang, Bert and Getoor, Lise",
-  title = "Learning Latent Groups with Hinge-loss {M}arkov Random Fields",
-  booktitle = "{ICML Workshop on Inferning: Interactions between Inference and Learning}",
-  year = 2013,
-  }

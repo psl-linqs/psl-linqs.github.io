@@ -1,6 +1,0 @@
-@inproceedings{broecheler:srl09,
-  author       = "Broecheler, Matthias and Getoor, Lise",
-  title        = "Probabilistic Similarity Logic",
-  booktitle    = "International Workshop on Statistical Relational Learning",
-  year         = "2009",
-}

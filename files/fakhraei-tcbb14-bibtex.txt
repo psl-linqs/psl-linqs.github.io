@@ -1,8 +1,0 @@
-@article{fakhraei:tcbb14,
-  author        = "Fakhraei, Shobeir and Huang, Bert and Raschid, Louiqa and Getoor, Lise",
-  title         = "Network-Based Drug-Target Interaction Prediction with Probabilistic Soft Logic",
-  journal	= "Computational Biology and Bioinformatics, IEEE/ACM Transactions on", 
-  year          = "2014",
-  doi		= "10.1109/TCBB.2014.2325031",
-  note          = "Code and data: https://github.com/shobeir/fakhraei_tcbb2014",
-}

@@ -1,6 +1,0 @@
-@inproceedings{broecheler:uai10,
-  author = "Broecheler, Matthias and Mihalkova, Lilyana and Getoor, Lise",
-  title = "Probabilistic Similarity Logic",
-  booktitle = "{Uncertainty in Artificial Intelligence (UAI)}",
-  year = 2010
-  }

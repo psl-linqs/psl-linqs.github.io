@@ -1,0 +1,149 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Overrides
+// $text-color: #4b5760 !default;
+
+@import "minima";
+
+$primary-color: $background-color;
+$primary-text-color: $text-color;
+
+$secondary-color: #00458c !default;
+$secondary-text-color: #fff !default;
+
+// Between primiary and seconday color.
+
+$transition-color: #7FA1C5 !default;
+$transition-text-color: #444 !default;
+
+// Additional
+
+.dev-warning {
+   background-color: #FFBA73;
+   text-align: center;
+   color: $primary-text-color;
+}
+
+header.site-header {
+   border-bottom: 0;
+}
+
+header.site-header,
+footer.site-footer {
+   border-top-color: $secondary-color;
+   background-color: $secondary-color !important;
+   color: $secondary-text-color !important;
+}
+
+header.site-header a,
+footer.site-footer a,
+footer.site-footer a svg,
+footer.site-footer span {
+   color: $secondary-text-color !important;
+   fill: $secondary-text-color !important;
+}
+
+footer.site-footer {
+   padding: 10px;
+}
+
+.center-text {
+   text-align: center;
+}
+
+.center-image {
+   margin: 0 auto;
+   display: block;
+}
+
+.round-corners {
+   border-radius: 20px;
+}
+
+.blog hr {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.tag-listing > span {
+   padding-top: 5px;
+}
+
+.tag-listing {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.tag-listing .tag-bubble {
+   display: inline-block;
+   padding: 7px;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+   outline: none;
+   border: #888 solid 1px;
+   border-radius: 10px;
+   box-shadow: 1px 2px #aaa;
+   margin-left: 20px;
+   font-size: $base-font-size * 0.90;
+   background-color: $primary-color;
+   color: $primary-text-color;
+}
+
+.tag-listing .tag-bubble:hover {
+   background-color: $transition-color;
+   color: $transition-text-color;
+}
+
+.tag-listing .tag-bubble:active {
+  box-shadow: 1px 1px #888;
+  transform: translateY(1px);
+}
+
+.tag-listing .tag-bubble[data-value=true] {
+   background-color: $secondary-color !important;
+   color: $secondary-text-color;
+}
+
+.tag-listing .tag-bubble[data-value=false] {
+   background-color: $primary-color;
+   color: $primary-text-color;
+}
+
+.post-list h3 {
+   margin-bottom: 0;
+}
+
+.post-list li {
+   margin-bottom: 20px;
+}
+
+.post-tags a {
+   color: $grey-color;
+}
+
+.simple-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+h2.footer-heading {
+   margin-bottom: 0;
+}
+
+.simple-footer span {
+   font-size: $small-font-size;
+   color: $grey-color;
+}
+
+.simple-footer ul.social-media-list {
+   margin-bottom: 0;
+}
+
+.simple-footer ul.social-media-list > li {
+   display: inline-block;
+   margin-left: 20px;
+}

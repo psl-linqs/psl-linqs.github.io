@@ -1,6 +1,0 @@
-@inproceedings{broecheler:nips10,
-  author       = "Broecheler, Matthias and Getoor, Lise",
-  title        = "Computing Marginal Distributions over Continuous {M}arkov Networks for Statistical Relational Learning",
-  booktitle    = "Advances in Neural Information Processing Systems (NIPS)",
-  year         = "2010",
-}

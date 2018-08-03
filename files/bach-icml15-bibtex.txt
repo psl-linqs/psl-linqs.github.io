@@ -1,6 +1,0 @@
-@inproceedings{bach:icml15,
-  author       = "Bach, Stephen H. and Huang, Bert and Boyd-Graber, Jordan and Getoor, Lise",
-  title        = "Paired-Dual Learning for Fast Training of Latent Variable Hinge-Loss MRFs",
-  booktitle    = "International Conference on Machine Learning (ICML)",
-  year         = "2015",
-  }

@@ -1,0 +1,11 @@
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
+
+# Standard
+*.swp
+.DS_Store
+
+# Project
+/old/

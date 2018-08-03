@@ -1,6 +1,0 @@
-@InProceedings{sridhar:acl15,
-  author       = "Sridhar, Dhanya and Foulds, James and Walker, Marilyn and Huang, Bert and Getoor, Lise",
-  title        = "Joint Models of Disagreement and Stance in Online Debate",
-  booktitle    = "Annual Meeting of the Association for Computational Linguistics (ACL)",
-  year         = "2015",
-}

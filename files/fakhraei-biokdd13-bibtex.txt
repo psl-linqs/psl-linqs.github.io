@@ -1,7 +1,0 @@
-@inproceedings{fakhraei:biokdd2013,
-  author       = "Fakhraei, Shobeir and Raschid, Louiqa and Getoor, Lise",
-  title        = "Drug-Target Interaction Prediction for Drug Repurposing with Probabilistic Similarity Logic",
-  booktitle    = "ACM SIGKDD 12th International Workshop on Data Mining in Bioinformatics (BIOKDD)",
-  year         = "2013",
-  publisher = "ACM",
-}

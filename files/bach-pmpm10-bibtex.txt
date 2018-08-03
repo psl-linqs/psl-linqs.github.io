@@ -1,6 +1,0 @@
-@InProceedings{bach:pmpm10,
-  author = "Bach, Stephen H. and Broecheler, Matthias and Kok, Stanley and Getoor, Lise",
-  title = "Decision-Driven Models with Probabilistic Soft Logic",
-  booktitle = "{NIPS Workshop on Predictive Models in Personalized Medicine}",
-  year = 2010,
-  }

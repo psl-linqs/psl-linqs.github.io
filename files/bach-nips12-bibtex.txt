@@ -1,7 +1,0 @@
-@inproceedings{bach:nips12,
-  author = "Bach, Stephen H. and Broecheler, Matthias and Getoor, Lise and O'Leary, Dianne P.",
-  title = "Scaling {MPE} Inference for Constrained Continuous {M}arkov Random Fields",
-  booktitle = "{Advances in Neural Information Processing Systems (NIPS)}",
-  pages = "2663--2671",
-  year = 2012
-  }

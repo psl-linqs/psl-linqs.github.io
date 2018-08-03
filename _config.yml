@@ -1,0 +1,44 @@
+title: Probabilistic Soft Logic
+email: psl-users@googlegroups.com
+description: >- # this means to ignore newlines until "baseurl:"
+   Probabilistic soft logic (PSL) is a machine learning framework for developing probabilistic models.
+   PSL models are easy and fast, you can define them using a straightforward logical syntax and solve them with fast convex optimization.
+   PSL has produced state-of-the-art results in many areas spanning natural language processing, social-network analysis, and computer vision.
+   The PSL framework is available as an Apache-licensed, open source project on GitHub with an active user group for support.
+baseurl: "/psl-website" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+permalink: /blog/:year/:month/:day/:title:output_ext
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Social Media
+twitter_username: LINQS_edu
+# github_username: linqs
+github_username: eriq-augustine
+youtube_channel: UCJjzqRLiAIa3qENUkzK0zMA
+googleplus_group: "106422136513784453367"
+rss: true
+
+# Custom template settings.
+minima:
+  date_format: "%B %d, %Y"
+
+# disqus:
+#   shortname: linqs
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

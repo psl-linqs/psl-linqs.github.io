@@ -1,6 +1,0 @@
-@inproceedings{huang:sbp2013,
-  author       = "Huang, Bert and Kimmig, Angelika and Getoor, Lise and Golbeck, Jennifer",
-  title        = "A Flexible Framework for Probabilistic Models of Social Trust",
-  booktitle    = "International Conference on Social Computing, Behavioral-Cultural Modeling, \& Prediction (SBP)",
-  year         = "2013",
-}

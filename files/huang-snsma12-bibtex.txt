@@ -1,6 +1,0 @@
-@inproceedings{huang:snsma12,
-  author = "Huang, Bert and Bach, Stephen H. and Norris, Eric and Pujara, Jay and Getoor, Lise",
-  title = "Social Group Modeling with Probabilistic Soft Logic",
-  booktitle = "{NIPS Workshop on Social Network and Social Media Analysis: Methods, Models, and Applications}",
-  year = 2012
-  }

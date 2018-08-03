@@ -1,6 +1,0 @@
-@InProceedings{london:sptli13,
-  author = "London, Ben and Khamis, Sameh and Bach, Stephen H. and Huang, Bert and Getoor, Lise and Davis, Larry",
-  title = "Collective Activity Detection using Hinge-loss {M}arkov Random Fields",
-  booktitle = "{CVPR Workshop on Structured Prediction: Tractability, Learning and Inference}",
-  year = 2013,
-  }
