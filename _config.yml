@@ -30,6 +30,9 @@ youtube_channel: UCJjzqRLiAIa3qENUkzK0zMA
 googleplus_group: "106422136513784453367"
 rss: true
 
+# Analytics
+google_analytics: UA-124343227-1
+
 # Custom template settings.
 minima:
   date_format: "%B %d, %Y"
