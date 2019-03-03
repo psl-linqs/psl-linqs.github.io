@@ -7,7 +7,7 @@ tags: [tutorial, v2.1.0]
 ---
 
 Probabilistic Soft Logic (PSL) is a [Statistical Relational Learning (SRL)](https://en.wikipedia.org/wiki/Statistical_relational_learning) framework.
-It is intended to by usable by people at all levels of Computer Science and Machine Learning.
+It is intended to be usable by people at all levels of Computer Science and Machine Learning.
 
 PSL currently has two primary interfaces: a command line interface (CLI) and a [Groovy](https://en.wikipedia.org/wiki/Apache_Groovy) interface.
 In this tutorial, we will cover the command line interface.
@@ -15,7 +15,7 @@ However, all the examples we reference also have implemented Groovy versions on 
 
 ### Setup
 
-For the CLI, the only hard requirement is that your have Java 7 or 8 installed.
+For the CLI, the only hard requirement is that you have Java 7 or 8 installed.
 However we will be using some scripts meant for UNIX-style systems (Linux and Mac), so Windows users will have [some additional steps]({{ '/faq/#can-psl-run-on-windows' | relative_url }}).
 We will also be using git to fetch some examples, but users without git can just use a browser to go to the repository and download it directly.
 
