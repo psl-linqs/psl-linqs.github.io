@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 nav-title: Publications
-order: 4
+order: 5
 permalink: /pubs/
 ---
 

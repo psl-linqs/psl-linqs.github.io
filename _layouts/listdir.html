@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign dirents = site.emptyArray %}
+
+{% for file in site.static_files %}
+    {% assign dirParts = file.path | split: page.targetDir %}
+    {% assign partsSize = dirParts | size %}
+
+    {% if partsSize == 2 and dirParts[0] == '' %}
+
+        {% assign parts = dirParts[1] | split: '/' %}
+        {% assign direntPath = page.targetDir | append: '/' | append: parts[1] %}
+        {% assign data = direntPath | append: ';' | append: parts[1] %}
+
+        {% unless dirents contains data %}
+            {% assign dirents = dirents | push: data %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+<ul class='listdir'>
+    {% for dirent in dirents %}
+        {% assign data = dirent | split: ';' %}
+        {% assign path = data[0] %}
+        {% assign name = data[1] %}
+
+        <li class='dirent'>
+            <a href="{{ path | relative_url }}">{{ name }}</a>
+        </li>
+    {% endfor %}
+</ul>

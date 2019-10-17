@@ -28,6 +28,8 @@ rss: true
 minima:
   date_format: "%B %d, %Y"
 
+emptyArray: []
+
 # disqus:
 #   shortname: linqs
 

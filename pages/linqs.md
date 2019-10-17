@@ -2,7 +2,7 @@
 layout: page
 title: LINQS
 nav-title: LINQS
-order: 5
+order: 6
 permalink: /linqs/
 ---
 
