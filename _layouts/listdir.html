@@ -13,23 +13,43 @@ layout: default
     {% if partsSize == 2 and dirParts[0] == '' %}
 
         {% assign parts = dirParts[1] | split: '/' %}
-        {% assign direntPath = page.targetDir | append: '/' | append: parts[1] %}
-        {% assign data = direntPath | append: ';' | append: parts[1] %}
 
-        {% unless dirents contains data %}
-            {% assign dirents = dirents | push: data %}
+        {% comment %}
+            Prepare items for sorting.
+            Just sort by version number, but X.Y.Z comes after CANARY-X.Y.Z.
+            To get this last sorting, append 'Z' to the non-canary version.
+        {% endcomment %}
+
+        {% assign basename = parts[1] %}
+        {% assign direntPath = page.targetDir | append: '/' | append: basename %}
+
+        {% assign sortKey = basename %}
+        {% if sortKey contains 'CANARY' %}
+            {% assign sortKey = sortKey | remove: 'CANARY-' %}
+        {% else %}
+            {% assign sortKey = sortKey | append: '-Z' %}
+        {% endif %}
+
+        {% assign stringData = sortKey | append: ';' | append: direntPath | append: ';' | append: basename %}
+
+        {% unless dirents contains stringData %}
+            {% assign dirents = dirents | push: stringData %}
         {% endunless %}
     {% endif %}
 {% endfor %}
 
+{% assign dirents = dirents | sort | reverse %}
+
 <ul class='listdir'>
     {% for dirent in dirents %}
         {% assign data = dirent | split: ';' %}
-        {% assign path = data[0] %}
-        {% assign name = data[1] %}
+
+        {% assign sortKey = data[0] %}
+        {% assign path = data[1] %}
+        {% assign basename = data[2] %}
 
         <li class='dirent'>
-            <a href="{{ path | relative_url }}">{{ name }}</a>
+            <a href="{{ path | relative_url }}">{{ basename }}</a>
         </li>
     {% endfor %}
 </ul>
