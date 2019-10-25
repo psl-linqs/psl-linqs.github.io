@@ -1,6 +1,5 @@
 ---
 layout: wiki
-title: What is Canary?
 ---
 
 ## What is Canary?
