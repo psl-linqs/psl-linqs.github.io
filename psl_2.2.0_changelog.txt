@@ -1,0 +1,34 @@
+* Make kernel computation faster using parallel class.
+* Added support for funcitonal predicates in CLI - Users will need to add a "function key" to the predicate definition.
+* Grounding (for logical rules) no longer throws a PAM exception unless the ground rule is also non-trivial.
+* Streaming grounding results from the database to grounding.
+* Table selectivity?
+* Rolled antrl to latest?
+* Added column histograms for Postgres
+* Added a check in grounding that abandons ground rules with no RVAs
+* Added the ability for the PAM to not cache closed atoms
+* CLI now reuses the database from inference in evaluation
+* Added feasibility information to the output of ADMM
+* Added ability to specify multiple evaluators in CLI
+* Added a new option to CLI (-gr/--groundrules) that will output the ground rules to the specified file (stdout if no path specified)
+* Fixed an overflow issue where functions with many terms overflowed the array size
+* Added the ability to output ground rules along with their satisfaction in the CLI. (Use --satisfaction flag)
+* Added different spaces for computing distance
+* Added testing infrastructure and tests for predicates, rules, inference etc.
+* Added python interface
+* Added GPP weight learning algorithm to PSL
+* Added config options for ContinuousRandomGridSearch
+* Added a class to handle low level matrix operations.
+* Added Cholesky Decomposition to FloatMatrix
+* Removed last uses of Apache Collection4 lib
+* Added an option to ground queries in serial (even when rewriting)
+* Removed Date ConstantType
+* Moved to Maven Central!
+* Added command line arguments for all PSL interfaces
+* Added a fix so that double adding a rule to a model does not throw an exception but logs a warning instead
+* Added a new rand function for bounded floats
+* Added DCDReasoner
+* Added full support for streaming SGD
+* Added IO stats to RuntimeStats
+* Fully deprecated Groovy interface
+* Added option to skip committing atoms to database after inference (--skipCommitAtoms)
