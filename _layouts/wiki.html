@@ -2,12 +2,8 @@
 layout: default
 ---
 
-{% assign developUrlPrefix = "https://github.com/linqs/psl-website/blob/develop/" %}
-
-{% assign parts = page.url | strip | split: "/" %}
-{% assign baseName = parts[-1] | split: "." %}
-{% assign baseName = baseName[0] %}
+{% assign gitURLPrefix = "https://github.com/linqs/psl-website/blob/develop/" %}
 
 {{ content }}
 
-<a class="u-url" href="{{developUrlPrefix | append: baseName | append: ".md"}}">Edit This Page</a>
+<a class='edit-wiki-link' href="{{ gitURLPrefix | append: page.path }}">Edit This Page</a>
