@@ -1,9 +1,9 @@
 ---
-# Modified from Minima theme.
-
 layout: default
 ---
 
+{% assign gitURLPrefix = "https://github.com/linqs/psl-website/blob/develop/" %}
+
 {{ content }}
 
-<a class="u-url" href="{{ page.url | relative_url }}">Edit</a>
+<a class='edit-wiki-link' href="{{ gitURLPrefix | append: page.path }}">Edit This Page</a>

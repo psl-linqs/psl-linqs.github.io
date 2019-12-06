@@ -21,14 +21,13 @@
         <div class="trigger">
           {%- assign sorted_pages = site.pages | sort: "order" -%}
           {%- for page in sorted_pages -%}
-            {%- if page.nav-title or page.title -%}
-              {%- if page.nav-title -%}
-                {%- assign title = page.nav-title -%}
-              {%- else -%}
-                {%- assign title = page.title -%}
-              {%- endif -%}
+            {%- if page.nav-title  -%}
+              {% assign target = page.url | relative_url %}
+              {% if page.nav-target %}
+                {% assign target = page.nav-target %}
+              {% endif %}
 
-              <a class="page-link" href="{{ page.url | relative_url }}">{{ title | escape }}</a>
+              <a class="page-link" href="{{ target }}">{{ page.nav-title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>
