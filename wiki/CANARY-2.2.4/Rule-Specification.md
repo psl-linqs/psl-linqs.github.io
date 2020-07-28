@@ -225,7 +225,14 @@ Bob     Charlie 0.33
 
 Now we will add this rule that acts as our prior:
 ```
-1.0: FriendsPrior(A, b) -> Friends(A, B) ^2
+1.0: FriendsPrior(A, B) -> Friends(A, B) ^2
+```
+
+Note that this implication wants the "head" (`Friends(A, B)`) to be *as large as* the "body" (`FriendsPrior(A, B)`).
+So, there are a range of values that fully satisfy this prior rule.
+To create a non-uniform prior that is only fully satisfied at a single point, you can use an arithmetic rule:
+```
+1.0: FriendsPrior(A, B) = Friends(A, B) ^2
 ```
 
 ## Special Operators
