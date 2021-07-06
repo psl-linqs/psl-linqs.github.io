@@ -14,8 +14,8 @@ For example:
     ...
     <dependency>
         <groupId>org.linqs</groupId>
-        <artifactId>psl-groovy</artifactId>
-        <version>2.1.3</version>
+        <artifactId>psl-cli</artifactId>
+        <version>2.1.0</version>
     </dependency>
     ...
 </dependencies>
@@ -30,7 +30,7 @@ For example:
     ...
     <dependency>
         <groupId>org.linqs</groupId>
-        <artifactId>psl-groovy</artifactId>
+        <artifactId>psl-cli</artifactId>
         <version>[2.1,)</version>
     </dependency>
     ...
@@ -46,7 +46,7 @@ For example:
     ...
     <dependency>
         <groupId>org.linqs</groupId>
-        <artifactId>psl-groovy</artifactId>
+        <artifactId>psl-cli</artifactId>
         <version>[2,)</version>
     </dependency>
     ...
@@ -62,8 +62,8 @@ See the [working with canary page](Working-With-Canary.md) to get detail on how 
     ...
     <dependency>
         <groupId>org.linqs</groupId>
-        <artifactId>psl-groovy</artifactId>
-        <version>CANARY</version>
+        <artifactId>psl-cli</artifactId>
+        <version>CANARY-2.2.1</version>
     </dependency>
     ...
 </dependencies>

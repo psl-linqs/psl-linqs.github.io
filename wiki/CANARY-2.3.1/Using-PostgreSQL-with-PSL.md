@@ -105,8 +105,8 @@ checkpoint_timeout = 30
 
 ## Using PostgreSQL in PSL
 
-### Groovy
-To use Postgres in the Groovy interface, just use the [PostgreSQLDriver](https://linqs-data.soe.ucsc.edu/psl-docs/docs/psl/develop-head/org/linqs/psl/database/rdbms/driver/PostgreSQLDriver.html) instead of the [H2DatabaseDriver](https://linqs-data.soe.ucsc.edu/psl-docs/docs/psl/develop-head/org/linqs/psl/database/rdbms/driver/H2DatabaseDriver.html).
+### Java
+To use Postgres in the Java interface, just use the [PostgreSQLDriver](/api/master/org/linqs/psl/database/rdbms/driver/PostgreSQLDriver.html) instead of the [H2DatabaseDriver](/api/master/org/linqs/psl/database/rdbms/driver/H2DatabaseDriver.html).
 There are various constructors that take in different information ranging from a database name to a full connection string.
 
 ```java

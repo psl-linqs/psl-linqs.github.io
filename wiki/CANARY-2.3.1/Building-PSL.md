@@ -2,8 +2,7 @@
 layout: wiki
 ---
 
-*This page is for building the PSL source code for the purposes of development.
-For running a standard PSL program, see [Running a Program](Running-a-Program.md).*
+*This page is for building the PSL source code for the purposes of development.*
 
 To get the code, simply clone the repository:
 ```sh

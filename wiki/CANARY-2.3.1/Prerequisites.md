@@ -15,7 +15,7 @@ This is especially relevant for Mac users where the version of Java is less freq
 #### Don't Build With Newer Versions of Java (9/10/11)
 
 Building on newer versions of Java (9/10/11) can cause issues with the build system that may look strange and be hard to diagnose.
-This means that building from source or the Java/Groovy interface should only be used with Java 7/8.
+This means that building from source or the Java interface should only be used with Java 7/8.
 However, running the CLI should be possible on newer versions of Java.
 
 ### Maven 3.x

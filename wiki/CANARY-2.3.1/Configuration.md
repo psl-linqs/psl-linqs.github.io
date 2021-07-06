@@ -5,7 +5,7 @@ layout: wiki
 See the [Configuration Options](Configuration-Options.md) page for all options that PSL uses.
 
 Many components of the PSL software have modifiable parameters and options, called properties.
-Every property has a key, which is a string that uniquely identifies it. 
+Every property has a key, which is a string that uniquely identifies it.
 These keys are organized into a namespace hierarchy, with each level separated by dots, e.g. `<namespace>.<option>`.
 
 Each PSL class can specify a namespace for the options used by the class and its subclasses.
@@ -18,7 +18,7 @@ Another public static final member declares the default value for that property.
 
 ## Setting Properties
 
-Setting properties for PSL programs differ depending on whether you are using the CLI or Java/Groovy interface.
+Setting properties for PSL programs differ depending on whether you are using the CLI or Java interface.
 
 ### CLI
 CLI users can pass any PSL configuration property on the CLI command line.
@@ -28,7 +28,7 @@ For example, you can run PSL with debug logging like this:
 java -jar psl.jar --infer --data example.data --model example.psl -D log4j.threshold=DEBUG
 ```
 
-### Java/Groovy
+### Java
 PSL projects can specify different configuration bundles in a file named `psl.properties` on the classpath.
 The standard location for this file is `<project root>/src/main/resources/psl.properties`.
 Each key-value pair should be specified on its own line with a `<namespace>.<option> = <value>` format.
@@ -36,7 +36,7 @@ Each key-value pair should be specified on its own line with a `<namespace>.<opt
 Here is an example `psl.properties`:
 ```ini
 # This is an example properties file for PSL.
-# 
+#
 # Options are specified in a namespace hierarchy, with levels separated by '.'.
 
 # Weight learning parameters
@@ -50,7 +50,7 @@ votedperceptron.stepsize = 0.1
 
 ## Getting Properties
 
-Properties can only be fetched from a running program in the Java/Groovy interface.
+Properties can only be fetched from a running program in the Java interface.
 They are accessed statically via the `org.linqs.psl.config.Config` class.
 
 For example:

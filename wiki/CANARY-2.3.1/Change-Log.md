@@ -30,8 +30,8 @@ Version 2.0.0 (https://github.com/linqs/psl/tree/2.0.0)
    - Add a new type of rule called [Arithmetic Rules](Rule-Specification.md#arithmetic-rules).
       - The use case previously satisfied by [Constraints](Constraints.md) have been replaced by arithmetic rules.
    - The [Rule Syntax](Rule-Specification.md) has been expanded to accomodate arithmetic rules.
-      - Rules in Groovy may now be specified [using strings](Rule-Specification-in-Groovy.md#string-syntax).
-      - Rules in Groovy may now be specified [in bulk](Rule-Specification-in-Groovy.md#bulk-string-syntax) using large strings or files.
+      - Rules in Groovy may now be specified using strings.
+      - Rules in Groovy may now be specified in bulk using large strings or files.
    - A [CLI Interface](Using-the-CLI.md) has been added to PSL to help develop program more quickly.
    - All PSL packages [have been renamed](Migrating-to-PSL-2.md#naming-changes) from `edu.umd.cs` to `org.linqs`.
    - [PSL Examples](Examples.md) have been relocated to an [external repository](https://bitbucket.org/linqs/psl-examples) instead of a maven archetype.

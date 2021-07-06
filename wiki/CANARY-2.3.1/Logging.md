@@ -4,9 +4,9 @@ layout: wiki
 
 PSL uses [SLF4J](http://www.slf4j.org/) for logging.
 
-### Java/Groovy
+### Java
 
-In the PSL Groovy program template, SLF4J is bound to Log4j 1.2.
+In the PSL Java interface, SLF4J is bound to Log4j 1.2.
 The Log4j configuration file is located at `src/main/resources/log4j.properties`.
 It should look something like this:
 ```
