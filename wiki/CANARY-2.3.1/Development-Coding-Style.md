@@ -20,6 +20,11 @@ Follow the [Google style guide](https://google.github.io/styleguide/javaguide.ht
 PSL uses continuous integration (currently [Travis](https://travis-ci.com/github/linqs/psl)) to run several different processes for each push.
 The specifics of the CI settings can be found in the [.travis.yml](https://github.com/linqs/psl/blob/develop/.travis.yml) configuration file and the [.ci](https://github.com/linqs/psl/blob/develop/.ci) directory.
 
+General style and lint checks can be run using the [.ci/style-and-lint.sh](https://github.com/linqs/psl/blob/develop/.ci/style-and-lint.sh) script:
+```
+.ci/style-and-lint.sh
+```
+
 ### Tests
 
 The tests run in the CI are run through maven using:
